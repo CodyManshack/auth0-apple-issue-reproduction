@@ -8,7 +8,7 @@ const app = createApp(App)
 app.use(router)
 
 const redirect_uri = Capacitor.getPlatform() === 'web'
-    ? `https://${import.meta.env.VITE_APP_DOMAIN}/callback`
+    ? `http://${import.meta.env.VITE_APP_DOMAIN}/callback`
     : `${import.meta.env.VITE_APP_ID}://${import.meta.env.VITE_APP_DOMAIN}/capacitor/${import.meta.env.VITE_APP_ID}/callback`
 
 app.use(
